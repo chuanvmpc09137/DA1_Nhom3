@@ -30,6 +30,81 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+
+  <style>
+    /* Đặt nền cho toàn trang */
+    body {
+      background-image: url('./images/chairuou.jpg'); /* Đổi 'images/background.jpg' thành đường dẫn ảnh nền của bạn */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Thiết kế form đăng nhập */
+    .login-form {
+      background-color: rgba(0, 0, 0, 0.7); /* Màu nền tối với độ trong suốt */
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      color: #fff;
+      border: 1px solid #333; /* Viền tối màu */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      margin: auto;
+      margin-top:60px ;
+    }
+
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-form .input-group {
+      margin-bottom: 15px;
+    }
+
+    .login-form label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-form button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Thiết kế footer */
+    .footer_section {
+      margin-top: auto;
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+  </style>
 </head>
 
 <body class="sub_page">
