@@ -12,221 +12,178 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="">
-  <title>Login Page</title>
-  <!-- bootstrap core css -->
+
+  <title>Royal Noir - Đăng Nhập</title>
+
+  <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!--owl slider stylesheet -->
+  <!-- Owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- nice select  -->
+  <!-- Nice select -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
-  <!-- font awesome style -->
+  <!-- Font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
-
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
+  <link rel="stylesheet" href="./css/Login.css">
+  <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
-  <style>
-    /* Đặt nền cho toàn trang */
-    body {
-      background-image: url('./images/chairuou.jpg'); /* Đổi 'images/background.jpg' thành đường dẫn ảnh nền của bạn */
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    
-    /* Thiết kế form đăng nhập */
-    .login-form {
-      background-color: rgba(0, 0, 0, 0.7); /* Màu nền tối với độ trong suốt */
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      color: #fff;
-      border: 1px solid #333; /* Viền tối màu */
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      margin: auto;
-      margin-top:60px ;
-    }
-
-    .login-form h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .login-form .input-group {
-      margin-bottom: 15px;
-    }
-
-    .login-form label {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-
-    .login-form input[type="text"],
-    .login-form input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #333;
-      color: #fff;
-    }
-
-    .login-form button {
-      width: 100%;
-      padding: 10px;
-      background-color: #007bff;
-      border: none;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .login-form button:hover {
-      background-color: #0056b3;
-    }
-
-    /* Thiết kế footer */
-    .footer_section {
-      margin-top: auto;
-      background-color: #333;
-      color: #fff;
-      padding: 20px 0;
-    }
-  </style>
 </head>
 
 <body class="sub_page">
-  <!-- Login Form -->
-   <section>
-  <div class="login-form">
-    <h2>Login</h2>
-    <form action="#" method="post">
-      <div class="input-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required>
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/hero-bg.jpg" alt="">
+    </div>
+    <!-- Header section starts -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>Royal Noir</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="login.html">Đăng nhập <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book.html">Đăng kí</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <div class="input-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <button type="submit">Log In</button>
-    </form>
+    </header>
+    <!-- End header section -->
   </div>
-</section>
-  <!-- End Login Form -->
 
-  <!-- Footer Section -->
+  <!-- Login section -->
+  <section class="custom_login_section layout_padding">
+    <div class="custom_container">
+      <div class="custom_row">
+        <div class="custom_col mx-auto">
+          <div class="custom_form_container">
+            <h2>Đăng nhập</h2>
+            <form action="process_login.php" method="post">
+              <div>
+                <input type="email" placeholder="Email" name="email" required />
+              </div>
+              <div>
+                <input type="password" placeholder="Mật khẩu" name="password" required />
+              </div>
+              <div class="custom_btn_box">
+                <button type="submit">Đăng nhập</button>
+              </div>
+              <p class="custom_link_text mt-3">Chưa có tài khoản? <a href="./register.html">Đăng kí ngay</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- End login section -->
+
+  <!-- Footer section -->
   <footer class="footer_section">
     <div class="container">
       <div class="row">
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
-            <h4>
-              Liên hệ chúng tôi
-            </h4>
+            <h4>Liên hệ chúng tôi</h4>
             <div class="contact_link_box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Địa chỉ
-                </span>
+                <span>Địa chỉ</span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Gọi +01 1234567890
-                </span>
+                <span>Gọi +01 1234567890</span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
+                <span>demo@gmail.com</span>
               </a>
             </div>
           </div>
         </div>
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
-            <a href="" class="footer-logo">
-              Royal Noir
-            </a>
-            <p>
-              Tinh hoa từ đất trời, đam mê trong từng giọt.    
-              Nâng ly cùng bạn bè, cảm nhận hương vị cuộc sống.       
-             </p>
+            <a href="" class="footer-logo">Royal Noir</a>
+            <p>Tinh hoa từ đất trời, đam mê trong từng giọt. Nâng ly cùng bạn bè, cảm nhận hương vị cuộc sống.</p>
             <div class="footer_social">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a>
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 footer-col">
-          <h4>
-            Thời gian mở bán
-          </h4>
-          <p>
-            Mỗi ngày
-          </p>
-          <p>
-            Từ 10:00 - 22:00
-          </p>
+          <h4>Thời gian mở bán</h4>
+          <p>Mỗi ngày</p>
+          <p>Từ 10:00 - 22:00</p>
         </div>
       </div>
       <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Royal Noir</a><br><br>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">Nhóm 3</a>
-        </p>
+        <p>&copy; <span id="displayYear"></span> All Rights Reserved By <a href="https://html.design/">Royal Noir</a></p>
+        <p>&copy; <span id="displayYear"></span> Distributed By <a href="https://themewagon.com/" target="_blank">Nhóm 3</a></p>
       </div>
     </div>
   </footer>
+  <!-- End footer section -->
 
-  <!-- jQery -->
+  <!-- jQuery -->
   <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <!-- bootstrap js -->
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
   <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
+  <!-- Owl slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <!-- isotope js -->
+  <!-- Isotope JS -->
   <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
+  <!-- Nice select -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  <!-- custom js -->
+  <!-- Custom JS -->
   <script src="js/custom.js"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-
   <script>
-    // Hiển thị năm hiện tại
-    document.getElementById("displayYear").innerText = new Date().getFullYear();
+    // Đảm bảo DOM đã sẵn sàng trước khi thực hiện các hiệu ứng
+document.addEventListener('DOMContentLoaded', function () {
+  const formContainer = document.querySelector('.custom_form_container');
+
+  // Hàm kiểm tra khi người dùng cuộn trang
+  function checkScroll() {
+    const rect = formContainer.getBoundingClientRect();
+    if (rect.top <= window.innerHeight * 0.8) { // Khi form gần đến vị trí trên màn hình
+      formContainer.classList.add('visible');
+    }
+  }
+
+  // Kiểm tra khi tải trang
+  checkScroll();
+
+  // Lắng nghe sự kiện cuộn trang
+  window.addEventListener('scroll', checkScroll);
+});
+
   </script>
+  <!-- End Google Map -->
+
 </body>
 
 </html>
